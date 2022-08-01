@@ -21,13 +21,16 @@ $ npm run tsc
 $ npm start
 ```
 
-### Npm Scripts
+### 部署
 
-- Use `npm run lint` to check code style
-- Use `npm test` to run unit test
-- se `npm run clean` to clean compiled js at development mode once
-
-### Requirement
-
-- Node.js 8.x
-- Typescript 2.8+
+```bash
+# 提前删除 node_mudules等忽略文件 再上传
+scp -r ./** root@112.74.201.142:/home/fe-cli-server
+cd /home/fe-cli-server
+# 创建镜像
+docker build -t fe-cli-server:v1.0 ./server
+# 创建启动容器
+docker run -d -p 7003:7001 --name fe-cli-server xxx(镜像id)
+# 7003 外网映射端口
+# 7001 容器内部端口
+```
