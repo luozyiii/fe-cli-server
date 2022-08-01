@@ -6,8 +6,6 @@ export default class AddController extends Controller {
     const { ctx } = this;
     // 查询全部
     const list = await ProjectModel.find({});
-    console.log(list);
     ctx.body = list;
-    // ctx.response.success({ data: list });
   }
 }

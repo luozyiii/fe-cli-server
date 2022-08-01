@@ -10,6 +10,21 @@ export default (appInfo: EggAppInfo) => {
   // add your egg config in here
   config.middleware = [];
 
+  // 解决 csrf 安全策略，导致 API 无法访问
+  config.security = {
+    csrf: {
+      enable: false,
+      // ignoreJSON: true
+    },
+    domainWhiteList: [ '*' ],
+  };
+
+  // 结局跨域的我问题
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
+
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,

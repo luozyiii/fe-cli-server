@@ -2,7 +2,8 @@ import { mongoose, Schema } from '../utils/mongo';
 
 const projectSchema = new Schema({
   name: String,
-  link: String,
+  url: String,
+  tag: [ String ],
 });
 
 const ProjectModel = mongoose.model('Project', projectSchema);
