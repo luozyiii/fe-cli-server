@@ -6,7 +6,18 @@ class ListController extends Controller {
     const { ctx } = this;
     // 查询全部
     const list = await ProjectModel.find({});
-    ctx.body = list;
+    if (list) {
+      ctx.body = {
+        code: 200,
+        data: list,
+        msg: '',
+      };
+    } else {
+      ctx.body = {
+        code: 403,
+        msg: '查询失败',
+      };
+    }
   }
 }
 
