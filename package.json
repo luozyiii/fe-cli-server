@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-fe-cli-server",
+    "prod": "egg-scripts start --title=egg-server-fe-cli-server",
     "stop": "egg-scripts stop --title=egg-server-fe-cli-server",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
