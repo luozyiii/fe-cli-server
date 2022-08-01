@@ -17,7 +17,6 @@ Don't tsc compile at development mode, if you had run `tsc` then you need to `np
 ### Deploy
 
 ```bash
-$ npm run tsc
 $ npm start
 ```
 

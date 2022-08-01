@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
-
-import { mongodbUrl, mongodName } from '../../config/db';
+const mongoose = require('mongoose');
+const mg = require('../../config/db');
+const { mongodbUrl, mongodName } = mg;
 
 const Schema = mongoose.Schema;
 mongoose.connect(`${mongodbUrl}/${mongodName}`);
@@ -11,8 +11,4 @@ db.once('open', function() {
   console.log('数据库连接成功...');
 });
 
-export {
-  mongoose,
-  Schema,
-};
-
+module.exports = { mongoose, Schema };

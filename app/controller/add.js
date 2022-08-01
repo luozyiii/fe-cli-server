@@ -1,8 +1,10 @@
-import { Controller } from 'egg';
-import ProjectModel from '../model/project';
+'use strict';
 
-export default class AddController extends Controller {
-  public async index() {
+const Controller = require('egg').Controller;
+const ProjectModel = require('../model/project');
+
+class AddController extends Controller {
+  async index() {
     const { ctx } = this;
     const body = ctx.request.body;
     // 实例化
@@ -22,3 +24,4 @@ export default class AddController extends Controller {
     }
   }
 }
+module.exports = AddController;

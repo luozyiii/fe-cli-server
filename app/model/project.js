@@ -1,4 +1,5 @@
-import { mongoose, Schema } from '../utils/mongo';
+const mgUtilt = require('../utils/mongo');
+const { mongoose, Schema } = mgUtilt;
 
 const projectSchema = new Schema({
   name: String,
@@ -8,4 +9,4 @@ const projectSchema = new Schema({
 
 const ProjectModel = mongoose.model('Project', projectSchema);
 
-export default ProjectModel;
+module.exports = ProjectModel;

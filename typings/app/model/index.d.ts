@@ -2,7 +2,7 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportProject from '../../../app/model/project';
+import ExportProject = require('../../../app/model/project');
 
 declare module 'egg' {
   interface IModel {
