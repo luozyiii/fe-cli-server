@@ -1,6 +1,6 @@
-const account = 'fe-cli';
-const pwd = 'fe.123456';
-const mongodbUrl = `mongodb://${account}:${pwd}@112.74.201.142:27017`;
+const account = 'admin';
+const pwd = '******';
+const mongodbUrl = `mongodb://${account}:${pwd}@81.71.98.176:27017`;
 const mongodName = 'fe-cli';
 
 module.exports = {
